@@ -1,17 +1,24 @@
+container {
+    overflow: hidden;
+}
+
 .jumbotron {
     text-align: center;
+    font-family: lemon_milk;
+    margin-left: -70px;
+    margin-right: -70px;
 }
 
-.col-sm-6 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 25%;
+.picture {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.col-sm-12 {
+.question {
     text-align: center;
-    font-size: 2em;
-    padding-top: 1em;
+    font-size: 2.7em;
+    padding-top: 1.3em;
+    padding-bottom: .5em;
 }
 
 img {
@@ -19,4 +26,7 @@ img {
     max-width: 100%;
 }
 
-row {}
+@font-face {
+    font-family: lemon_milk;
+    src: url(fonts/lemon_milk/LemonMilk.otf);
+}
