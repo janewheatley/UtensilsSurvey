@@ -5,8 +5,7 @@ container {
 .jumbotron {
     text-align: center;
     font-family: lemon_milk;
-    margin-left: -70px;
-    margin-right: -70px;
+    width: 100%;
 }
 
 .picture {
@@ -29,4 +28,9 @@ img {
 @font-face {
     font-family: lemon_milk;
     src: url(fonts/lemon_milk/LemonMilk.otf);
+}
+
+@font-face {
+    font-family: alphadishes;
+    src: url(fonts/AlphaDishes.ttf);
 }
