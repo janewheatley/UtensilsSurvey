@@ -29,8 +29,3 @@ img {
     font-family: lemon_milk;
     src: url(fonts/lemon_milk/LemonMilk.otf);
 }
-
-@font-face {
-    font-family: alphadishes;
-    src: url(fonts/AlphaDishes.ttf);
-}
