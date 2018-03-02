@@ -29,3 +29,14 @@ img {
     font-family: lemon_milk;
     src: url(fonts/lemon_milk/LemonMilk.otf);
 }
+
+.buttonContainer {
+    text-align: center;
+    padding-top: 2.5em;
+    padding-bottom: 6em;
+}
+
+.btn {
+    width: 25%;
+    background-color: #8064A2;
+}
