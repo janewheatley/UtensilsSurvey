@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <link rel="stylesheet" type="text/css" href="public/styles.css">
-    <script src="index.js"></script>
+
 
 
     <title>Which Utensil are You?</title>
@@ -17,7 +17,7 @@
 <body>
     <!--placed jumbotron outside of bootstrap container so that it would take full width of page-->
     <div class="jumbotron">
-        <h1>Which Utensil Are You?</h1>
+        <h1 id="test">Which Utensil Are You?</h1>
     </div>
     <div class="container">
 
@@ -25,27 +25,27 @@
             <div class="col-sm-12 question">How do you like your coffee?</div>
         </div>
         <div class="row">
-            <div class="col-sm-4 picture">
+            <div class="col-sm-4 picture" id="coffee1">
                 <img src="public/images/Q1/images.jpeg">
             </div>
 
-            <div class="col-sm-4 picture">
+            <div class="col-sm-4 picture" id="coffee2">
                 <img src="public/images/Q1/BodumJavaBlkFrenchPressSHS18.jpeg">
             </div>
-            <div class="col-sm-4 picture">
+            <div class="col-sm-4 picture" id="coffee3">
                 <img src="public/images/Q1/slowbrew_env3.jpg">
             </div>
 
         </div>
         <div class="row">
 
-            <div class="col-sm-4 picture">
+            <div class="col-sm-4 picture" id="coffee4">
                 <img src="public/images/Q1/CoffeePic.jpg">
             </div>
-            <div class="col-sm-4 picture">
+            <div class="col-sm-4 picture" id="coffee5">
                 <img src="public/images/Q1/coffemaker_21.jpg">
             </div>
-            <div class="col-sm-4 picture">
+            <div class="col-sm-4 picture" id="coffee6">
                 <img src="public/images/Q1/starbucks-green-cup-zoom-5249f761-2499-47aa-8ad7-1d1f6d735562.jpg">
             </div>
 
@@ -165,5 +165,8 @@
 
 
 </body>
+
+<!--the reference to our js must be at the end of our html file bc it reads linearly-->
+<script src="index.js"></script>
 
 </html>
