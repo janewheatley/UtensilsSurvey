@@ -23,7 +23,11 @@ function selectPicture(choice) {
         //****question about why using variable j, we are essentially doing the for loop from above again..do we need to??
         //answer: above we are looping to set the click for each picture. below, we are looping once we have clicked the button to change the settings once one is clicked
         //so here, we are saying "we clicked a button. now lets go through every button to seee if it is hte one we clicked and change the settings accordingly"
+<<<<<<< HEAD
         for (let j = 0; j < coffeePics.length; j++) {
+=======
+        for (let j = 0; coffeePics.length; j++) {
+>>>>>>> 99ce1d89ebd8a3518817ac9ac72e9074492e20e2
             //if the variable is clicked, then change the background color to red
             if (j == choice) {
                 this.style.backgroundColor = "red";
