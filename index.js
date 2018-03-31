@@ -23,81 +23,82 @@ function selectPicture(choice) {
         //****question about why using variable j, we are essentially doing the for loop from above again..do we need to??
         //answer: above we are looping to set the click for each picture. below, we are looping once we have clicked the button to change the settings once one is clicked
         //so here, we are saying "we clicked a button. now lets go through every button to seee if it is hte one we clicked and change the settings accordingly"
-<<<<<<< HEAD
-        for (let j = 0; j < coffeePics.length; j++) {
-=======
-        for (let j = 0; coffeePics.length; j++) {
->>>>>>> 99ce1d89ebd8a3518817ac9ac72e9074492e20e2
-            //if the variable is clicked, then change the background color to red
-            if (j == choice) {
-                this.style.backgroundColor = "red";
-                //otherwise, turn the background color white
-            } else {
-                //****question about why coffeePicsj here bc it seems like that would only be one coffee pic at a time???
-                //answer: correct. the loop is going through each element and one at a time, the if statement is saying "for this element,
-                //is the index == choice?" and then changes the setting accordingly. you have to change each one individually because an array doesn't
-                //have the same properties as an object from the dom. doing coffeePics.style.backgroundColor wouldn't work.
-                coffeePics[j].style.backgroundColor = "white";
+        <<
+        << << < HEAD
+        for (let j = 0; j < coffeePics.length; j++) { ===
+            === =
+            for (let j = 0; coffeePics.length; j++) { >>>
+                >>> > 99 ce1d89ebd8a3518817ac9ac72e9074492e20e2
+                //if the variable is clicked, then change the background color to red
+                if (j == choice) {
+                    this.style.backgroundColor = "red";
+                    //otherwise, turn the background color white
+                } else {
+                    //****question about why coffeePicsj here bc it seems like that would only be one coffee pic at a time???
+                    //answer: correct. the loop is going through each element and one at a time, the if statement is saying "for this element,
+                    //is the index == choice?" and then changes the setting accordingly. you have to change each one individually because an array doesn't
+                    //have the same properties as an object from the dom. doing coffeePics.style.backgroundColor wouldn't work.
+                    coffeePics[j].style.backgroundColor = "white";
+                }
             }
         }
     }
-}
 
 
-//examples to explain a little
-//ourNames = ['jamie','jane','catie'] <-- this is an array. if you were to do ourNames.style.backgroundColor it would be like doing
-//['jamie','jane','catie'].style.backgroundColor
-//you can't do that to an array. an array is just a container to hold other objects. it has some of its own properties (like length), but not the same as the ones inside
-//but if you loop through it, ourNames[0] is like doing
-//'jamie'.style.backgroundColor
+    //examples to explain a little
+    //ourNames = ['jamie','jane','catie'] <-- this is an array. if you were to do ourNames.style.backgroundColor it would be like doing
+    //['jamie','jane','catie'].style.backgroundColor
+    //you can't do that to an array. an array is just a container to hold other objects. it has some of its own properties (like length), but not the same as the ones inside
+    //but if you loop through it, ourNames[0] is like doing
+    //'jamie'.style.backgroundColor
 
 
-//**can we change this so that the function runs through the pics in only a given group and then we can call each group separately so that you can highlight in more than one group??
-// yeah. we can do that. one way is to do this `let coffeePics = document.querySelectorAll('.coffeeGrp');` for each question, and then put a loop that calls the function for each question.
-//there may be a better way but i this it's using more complex stuff
-
-
-
-
-//****EXPERIMENTING WITH FUNCTIONS****
-
-//changing header color
+    //**can we change this so that the function runs through the pics in only a given group and then we can call each group separately so that you can highlight in more than one group??
+    // yeah. we can do that. one way is to do this `let coffeePics = document.querySelectorAll('.coffeeGrp');` for each question, and then put a loop that calls the function for each question.
+    //there may be a better way but i this it's using more complex stuff
 
 
 
 
-//let headerSelect = document.querySelector(".jumbotron");
-//
-//function headerColor() {
-//    headerSelect.onclick = function () {
-//        this.style.color = "purple";
-//    }
-//}
-//headerColor()
+    //****EXPERIMENTING WITH FUNCTIONS****
+
+    //changing header color
+
+
+
+
+    //let headerSelect = document.querySelector(".jumbotron");
+    //
+    //function headerColor() {
+    //    headerSelect.onclick = function () {
+    //        this.style.color = "purple";
+    //    }
+    //}
+    //headerColor()
 
 
 
 
 
-//changing background color on pictures when mousing over
+    //changing background color on pictures when mousing over
 
 
-//
-//let pictureMouseover = document.querySelectorAll(".picture");
-//
-//for (let i = 0; pictureMouseover.length; i++) {
-//    mouseoverColor(i);
-//}
-//
-//function mouseoverColor(choice) {
-//    pictureMouseover[choice].onmouseover = function () {
-//        for (let j = 0; pictureMouseover.length; j++) {
-//            if (j == choice) {
-//                this.style.backgroundColor = "blue";
-//            } else {
-//                pictureMouseover[j].style.backgroundColor = "white";
-//            }
-//        }
-//    }
-//
-//}
+    //
+    //let pictureMouseover = document.querySelectorAll(".picture");
+    //
+    //for (let i = 0; pictureMouseover.length; i++) {
+    //    mouseoverColor(i);
+    //}
+    //
+    //function mouseoverColor(choice) {
+    //    pictureMouseover[choice].onmouseover = function () {
+    //        for (let j = 0; j < pictureMouseover.length; j++) {
+    //            if (j == choice) {
+    //                this.style.backgroundColor = "blue";
+    //            } else {
+    //                pictureMouseover[j].style.backgroundColor = "white";
+    //            }
+    //        }
+    //    }
+    //
+    //}
