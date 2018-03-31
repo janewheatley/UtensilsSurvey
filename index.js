@@ -30,3 +30,54 @@ function selectPicture(choice) {
         }
     }
 }
+
+
+//**can we change this so that the function runs through the pics in only a given group and then we can call each group separately so that you can highlight in more than one group??
+
+
+
+
+
+//****EXPERIMENTING WITH FUNCTIONS****
+
+//changing header color
+
+
+
+
+//let headerSelect = document.querySelector(".jumbotron");
+//
+//function headerColor() {
+//    headerSelect.onclick = function () {
+//        this.style.color = "purple";
+//    }
+//}
+//headerColor()
+
+
+
+
+
+//changing background color on pictures when mousing over
+
+
+
+
+//let pictureMouseover = document.querySelectorAll(".picture");
+//
+//for (let i = 0; pictureMouseover.length; i++) {
+//    mouseoverColor(i);
+//}
+//
+//function mouseoverColor(choice) {
+//    pictureMouseover[choice].onmouseover = function () {
+//        for (let j = 0; pictureMouseover.length; j++) {
+//            if (j == choice) {
+//                this.style.backgroundColor = "blue";
+//            } else {
+//                pictureMouseover[j].style.backgroundColor = "white";
+//            }
+//        }
+//    }
+//
+//}
