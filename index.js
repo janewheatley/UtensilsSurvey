@@ -61,8 +61,7 @@ function selectPicture(choice) {
 //changing background color on pictures when mousing over
 
 
-
-
+//
 //let pictureMouseover = document.querySelectorAll(".picture");
 //
 //for (let i = 0; pictureMouseover.length; i++) {
