@@ -13,6 +13,11 @@ container {
     padding-bottom: 15px;
 }
 
+.selected {
+    background-color: red;
+    opacity: .5;
+}
+
 .question {
     text-align: center;
     font-size: 2.7em;
@@ -39,4 +44,8 @@ img {
 .btn {
     width: 25%;
     background-color: #8064A2;
+}
+
+.hidden {
+    visibility: hidden;
 }
