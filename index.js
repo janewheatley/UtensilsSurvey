@@ -37,14 +37,39 @@ submitClick.onclick = function () {
         let parsedNum = parseInt(selectedGrp[i].getAttribute("value"));
         total += parsedNum;
     }
+    let resultString = "";
+    let srcFileName = "";
     if (total > 0 && total <= 8) {
-        console.log("You are a fork");
+      resultString = "You are a fork";
+      srcFileName = "public/images/results/fork.jpg";
+      console.log("You are a fork");
     } else if (total > 8 && total <= 16) {
-        console.log("You are a spoon");
+      resultString = "You are a spoon";
+      srcFileName = "public/images/results/spoon.jpg";
+      console.log("You are a spoon");
     } else {
-        console.log("You are a knife");
+      resultString = "You are a knife";
+      srcFileName = "public/images/results/knife.jpg";
+      console.log("You are a knife");
     }
-    this.classList.add("hidden");
+    let buttonContainer = document.querySelector('.buttonContainer');
+    buttonContainer.classList.add("hidden");
+
+    let result = document.querySelector('.resultsContainer');
+
+    result.classList.remove("hidden");
+
+    let resultTitle = document.createElement("h1");
+    resultTitle.innerHTML = resultString;
+    result.appendChild(resultTitle);
+
+    let resultImg = document.createElement("img");
+    resultImg.src = srcFileName;
+    result.appendChild(resultImg);
+
+    //do something to make all of the image styling stick after you click the submit button!!!!!!!!!!!!
+    let allImages = document.querySelectorAll('.picture');
+
     console.log("total equals " + total);
 }
 
@@ -63,8 +88,10 @@ function selectPicture(choice, groupPics) {
             if (j == choice) {
                 //adds another class to whichever classgroup you are in, here we added the class selected to our div class
                 this.classList.add("selected");
+                this.classList.remove("not-selected");
             } else {
                 groupPics[j].classList.remove("selected");
+                groupPics[j].classList.add("not-selected");
             }
         }
     }
