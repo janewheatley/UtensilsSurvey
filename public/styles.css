@@ -15,7 +15,10 @@ container {
 
 .selected {
     background-color: red;
-    opacity: .5;
+}
+
+.not-selected {
+  opacity: .5;
 }
 
 .question {
@@ -48,4 +51,9 @@ img {
 
 .hidden {
     visibility: hidden;
+    height: 0px;
+}
+
+.resultsContainer{
+  text-align: center;
 }
