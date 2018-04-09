@@ -8,6 +8,9 @@ let seatPics = document.querySelectorAll('.seatGrp');
 
 //each for loop runs through the length of the group of pics, this is also where the function is called
 //**ask jamie again about having two attributes
+//answer:
+// i = the index of the picture we are applying to click function to (and when we click it, the index of the picture we are marking as selected)
+// [whatever]Pics = the group of photos, so that we can loop through the whole group and mark every one in the group that we didn't select as not selected
 for (let i = 0; i < coffeePics.length; i++) {
     selectPicture(i, coffeePics);
 }
@@ -65,6 +68,7 @@ submitClick.onclick = function () {
 
     //we create a new element to show our results
     //**why an empty string above?
+    //answer: because if we created teh variable within an if statement, there is a possibility that it doesn't exist when you call it later, so if you create the variable before the if and then modify it within the if, you can access it after the if. we could have made it let resultString = "Empty" and then overwrite it within the if statement. same thing would have happened. 
     let resultTitle = document.createElement("h1");
     resultTitle.innerHTML = resultString;
     //appendChild puts the element below
