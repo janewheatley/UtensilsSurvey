@@ -1,17 +1,13 @@
-//next time, we would like to only select one variable per category.  Jamie suggested using "selected" in html
-
-
-//selects only one picture from the coffee group
-
-//create a variable called pictures, where you select all of the pictures within the first question about coffee
+//create a separate variable for each set of pics, to be able to select them separately
 let coffeePics = document.querySelectorAll('.coffeeGrp');
 let cookiePics = document.querySelectorAll('.cookieGrp');
 let dogPics = document.querySelectorAll('.dogGrp');
 let seatPics = document.querySelectorAll('.seatGrp');
 
-//create a loop that runs through the total length, 6, of the pictures.  then, after the function is run, this is where the function is called.
-// the function name is selectPicture and i stands for the invidivual picture that is clicked
-//here we are salying "go to every picture and set the onclick so that when we click it, it does work"
+
+
+//each for loop runs through the length of the group of pics, this is also where the function is called
+//**ask jamie again about having two attributes
 for (let i = 0; i < coffeePics.length; i++) {
     selectPicture(i, coffeePics);
 }
@@ -28,39 +24,50 @@ for (let i = 0; i < seatPics.length; i++) {
     selectPicture(i, seatPics);
 }
 
+//this is selecing the submit button
 let submitClick = document.querySelector(".submit");
 
+
+//this is what needs to be completed when you click on submit
 submitClick.onclick = function () {
+    //selectedGrp is the variable name for all of the pics that you click on
     let selectedGrp = document.querySelectorAll(".selected");
+    //the total is for when we add tog all the values we assigned in our html, the total starts at zero and keeps going up by the parsedNum we add to it
     let total = 0;
     for (i = 0; i < selectedGrp.length; i++) {
+        //we need to use parseInt because we end up getting a string otherwise
+        //we made a variable for which item we click and then we needed to specifically get the value we assigned to it
         let parsedNum = parseInt(selectedGrp[i].getAttribute("value"));
         total += parsedNum;
     }
     let resultString = "";
     let srcFileName = "";
     if (total > 0 && total <= 8) {
-      resultString = "You are a fork";
-      srcFileName = "public/images/results/fork.jpg";
-      console.log("You are a fork");
+        resultString = "You are a fork";
+        srcFileName = "public/images/results/fork.jpg";
+        console.log("You are a fork");
     } else if (total > 8 && total <= 16) {
-      resultString = "You are a spoon";
-      srcFileName = "public/images/results/spoon.jpg";
-      console.log("You are a spoon");
+        resultString = "You are a spoon";
+        srcFileName = "public/images/results/spoon.jpg";
+        console.log("You are a spoon");
     } else {
-      resultString = "You are a knife";
-      srcFileName = "public/images/results/knife.jpg";
-      console.log("You are a knife");
+        resultString = "You are a knife";
+        srcFileName = "public/images/results/knife.jpg";
+        console.log("You are a knife");
     }
+    //we are hiding the button container once the submit is clicked...adding hidden on click to the class
     let buttonContainer = document.querySelector('.buttonContainer');
     buttonContainer.classList.add("hidden");
 
+    //we are showing the results when we click by removing the class hidden
     let result = document.querySelector('.resultsContainer');
-
     result.classList.remove("hidden");
 
+    //we create a new element to show our results
+    //**why an empty string above?
     let resultTitle = document.createElement("h1");
     resultTitle.innerHTML = resultString;
+    //appendChild puts the element below
     result.appendChild(resultTitle);
 
     let resultImg = document.createElement("img");
