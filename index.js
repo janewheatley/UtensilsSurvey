@@ -78,8 +78,11 @@ submitClick.onclick = function () {
     resultImg.src = srcFileName;
     result.appendChild(resultImg);
 
-    //do something to make all of the image styling stick after you click the submit button!!!!!!!!!!!!
+    //we are disabling the click so that we can't change selections after we hit submit
     let allImages = document.querySelectorAll('.picture');
+    for (let i = 0; i < allImages.length; i++) {
+        allImages[i].onclick = null;
+    }
 
     console.log("total equals " + total);
 }
