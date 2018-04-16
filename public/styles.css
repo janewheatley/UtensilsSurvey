@@ -13,6 +13,9 @@ container {
     padding-bottom: 15px;
 }
 
+
+/*need to figure out how to turn zoom off after submit*/
+
 .zoom:hover {
     -ms-transform: scale(1.05);
     /* IE 9 */

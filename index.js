@@ -78,11 +78,18 @@ submitClick.onclick = function () {
     resultImg.src = srcFileName;
     result.appendChild(resultImg);
 
+
     //we are disabling the click so that we can't change selections after we hit submit
     let allImages = document.querySelectorAll('.picture');
     for (let i = 0; i < allImages.length; i++) {
         allImages[i].onclick = null;
     }
+
+    //we are disabling the hover zoom effect so the user doesn't get confused and think they can still click on things
+    for (let h = 0; h < allImages.length; i++) {
+        allImages[i].classList.remove("zoom");
+    }
+
 
     console.log("total equals " + total);
 }
