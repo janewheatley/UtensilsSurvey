@@ -66,5 +66,10 @@ img {
 }
 
 .resultsContainer {
+    margin-top: 2.5em;
     text-align: center;
+}
+
+.blankRow {
+    height: 10px;
 }
