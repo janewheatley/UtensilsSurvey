@@ -70,6 +70,7 @@ submitClick.onclick = function () {
 
     let resultTitle = document.createElement("h1");
     resultTitle.innerHTML = resultString;
+    resultTitle.className = "resultTitle";
     //appendChild puts the element below
     result.appendChild(resultTitle);
 
@@ -80,8 +81,7 @@ submitClick.onclick = function () {
 
     let coorDiv = document.querySelector(".resultsContainer");
     console.log(coorDiv.offsetTop);
-    window.scroll(0, 4000);
-
+    coorDiv.scrollIntoView();
 
 
     //we are disabling the click so that we can't change selections after we hit submit

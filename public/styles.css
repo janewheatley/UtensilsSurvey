@@ -47,6 +47,8 @@ img {
 .resultImg {
     height: 550px;
     width: 550px;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
 }
 
 @font-face {
@@ -71,10 +73,12 @@ img {
 }
 
 .resultsContainer {
-    margin-top: 2.5em;
+    margin-top: 5em;
+    margin-bottom: 2em;
     text-align: center;
+    outline: 5px solid purple;
 }
 
-.blankRow {
-    height: 10px;
+.resultTitle {
+    padding-top: 1em;
 }
