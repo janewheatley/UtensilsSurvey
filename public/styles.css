@@ -44,6 +44,11 @@ img {
     max-width: 100%;
 }
 
+.resultImg {
+    height: 550px;
+    width: 550px;
+}
+
 @font-face {
     font-family: lemon_milk;
     src: url(fonts/lemon_milk/LemonMilk.otf);

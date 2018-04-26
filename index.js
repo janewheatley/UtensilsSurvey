@@ -75,11 +75,12 @@ submitClick.onclick = function () {
 
     let resultImg = document.createElement("img");
     resultImg.src = srcFileName;
+    resultImg.className = "resultImg";
     result.appendChild(resultImg);
 
     let coorDiv = document.querySelector(".resultsContainer");
     console.log(coorDiv.offsetTop);
-    window.scrollTo(0, coorDiv.scrollHeight);
+    window.scroll(0, 4000);
 
 
 
